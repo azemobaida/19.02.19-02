@@ -4,31 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp12
+namespace ConsoleApp13
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			Console.Write("enter number: ");
-			int a = Convert.ToInt32(Console.ReadLine());
-			Console.Write("enter number: ");
-			int b = Convert.ToInt32(Console.ReadLine());
-			Console.Write("enter number: ");
-			int c = Convert.ToInt32(Console.ReadLine());
+			int x;
+			double sum = 0;
+			int i = 0;
 
-			if (a > b && a > c)
+			Console.WriteLine("Enter numbers for average (negative to exit):");
+
+			x = Convert.ToInt32(Console.ReadLine());
+
+			while (x >= 0)
 			{
-				Console.WriteLine(a + " is the biggest");
+				i++;
+				sum = sum + x;
+
+				x = Convert.ToInt32(Console.ReadLine());
+
+				
 			}
-			else if (b > a && b > c)
-			{
-				Console.WriteLine(b + " is the biggest");
-			}
-			else
-			{
-				Console.WriteLine(c + " is the biggest");
-			}
+
+			Console.WriteLine("average = " + sum / i);
 		}
 	}
 }
